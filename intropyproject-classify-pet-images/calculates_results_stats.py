@@ -91,12 +91,15 @@ def calculates_results_stats(results_dic):
             if results_dic[key][4] == 1:
                 stat_results['n_correct_dogs'] += 1
 
-        else:
+        elif(results_dic[key][4] == 0):
             stat_results['n_correct_notdogs'] += 1
 
         stat_results['n_notdogs_img'] = (stat_results['n_images'] - stat_results['n_dogs_img'])
 
-        stat_results['pct_match'] = (stat_results['n_match']/stat_results['n_images']) * 100.0
+        if(stat_results['n_images'] > 0):
+            stat_results['pct_match'] = (stat_results['n_match']/stat_results['n_images']) * 100.0
+        else:
+            stat_results['pct_match'] = 0
 
         if(stat_results['n_dogs_img'] > 0):
             stat_results['pct_correct_dogs'] = (stat_results['n_correct_dogs']/stat_results['n_dogs_img']) * 100.0

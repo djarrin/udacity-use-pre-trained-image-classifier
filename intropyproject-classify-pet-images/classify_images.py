@@ -78,4 +78,4 @@ def classify_images(images_dir, results_dic, model):
         else:
             results_dic[key].append(0)
 
-    None
+    return None

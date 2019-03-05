@@ -318,7 +318,7 @@ PetLabelDog: 1  ClassLabelDog: 1
 
  ** Statistics from calculates_results_stats() function:
 N Images: 41  N Dog Images: 31  N NotDog Images: 10 
-Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  90.3
+Pct Corr dog: 100.0 Pct Corr NOTdog:  90.0  Pct Corr Breed:  90.3
 
  ** Check Statistics - calculated from this function as a check:
 N Images: 41  N Dog Images: 31  N NotDog Images: 10 
@@ -333,7 +333,11 @@ N Not-Dog Images    :  10
 pct_match           : 82.926829%
 pct_correct_dogs    : 100.000000%
 pct_correct_breed   : 90.322581%
-pct_correct_notdogs : 100.000000%
+pct_correct_notdogs : 90.000000%
+
+INCORRECT Dog/NOT Dog Assignments:
+Pet Label           : cat                 
+Classifier Label    : norwegian elkhound, elkhound
 
 INCORRECT Dog Breed Assignment:
 Real:                     beagle   Classifier:  walker hound, walker foxhound

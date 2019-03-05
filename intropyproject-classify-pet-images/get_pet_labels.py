@@ -57,15 +57,14 @@ def get_pet_labels(image_dir):
 
            #normalize the file name
            low_pet_image = pet_image.lower()
-           word_list_pet_image = low_pet_image.split("_")
 
-           #to check for special cases where no numbric underscore characters are present in the filename
-           if(len(word_list_pet_image) == 1):
-               word_list_pet_image[0] = word_list_pet_image[0].split('.')[0]
+           #remove file exstenstion first then split by "_", if no "_" is present
+           #then the single word will be only element in list
+           word_list_pet_image = low_pet_image.split(".")[0].split("_")
 
            #create label from only alpha numeric values
            for word in word_list_pet_image:
-               if word.isalpha() and word != 'jpg':
+               if word.isalpha():
                    pet_label += word + " "
 
            pet_label = pet_label.strip()
